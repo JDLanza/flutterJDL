@@ -33,13 +33,21 @@ class _contadorState extends State<contador> {
         children: [
           FloatingActionButton(
             onPressed: () {
+              clickcontador = 0;
+              setState(() {});
+            },
+            child: Icon(Icons.refresh_rounded),
+          ),
+          SizedBox(height: 500),
+          FloatingActionButton(
+            onPressed: () {
               if (clickcontador == 0) return;
               clickcontador--;
               setState(() {});
             },
             child: Icon(Icons.exposure_minus_1),
           ),
-          SizedBox(height: 30),
+          SizedBox(height: 25),
           FloatingActionButton(
             onPressed: () {
               clickcontador++;
